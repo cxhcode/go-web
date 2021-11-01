@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="utf-8">
+    <title>宝宝兑奶</title>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#submit").click(function () {
+                var wendu1 = $("#wendu1").val()
+                var wendu2 = $("#wendu2").val()
+                var shuiliang = $("#shuiliang").val()
+                var wendu3 = $("#wendu3").val()
+                var x
+                var y
+                x = parseInt(shuiliang * (wendu3 - wendu2) / (wendu1 - wendu2));
+                y = shuiliang - x;
+                $("#shuiliang1").val(x);
+                $("#shuiliang2").val(y);
+            })
+        })
+
+
+    </script>
+</head>
+<body background="https://gimg2.baidu.com/image_search/src=http%3A%2F%2F04.imgmini.eastday.com%2Fmobile%2F20180531%2F20180531100756_f4a07dfde5c7ce5aa36a1edf7a33a9bb_5.jpeg&refer=http%3A%2F%2F04.imgmini.eastday.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1638374704&t=c521897de57522ff2d7611be5f4a6f43">
+
+<label for="wendu1">冷水温度</label><input type="text" id="wendu1" value="20">℃<br>
+<label for="wendu2">热水温度</label><input type="text" id="wendu2" value="100">℃<br>
+<label for="wendu3">目标温度</label><input type="text" id="wendu3" value="37">℃<br>
+<label for="shuiliang">目标水量</label><input type="text" id="shuiliang" value="150">ML<br>
+
+<p></p>
+<button value="Submit" id="submit">计算</button>
+<p></p>
+
+<label for="shuiliang1">冷水量</label><input type="text" id="shuiliang1">ML<br>
+<label for="shuiliang2">热水量</label><input type="text" id="shuiliang2">ML
+<br>
+
+
+</body>
+</html>
